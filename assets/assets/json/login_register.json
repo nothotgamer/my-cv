@@ -1,0 +1,62 @@
+{
+  "app": {
+    "name": "Login & Register Mobile App",
+    "source": "User-provided PDF",
+    "extractedAt": "2025-08-22T00:00:00Z"
+  },
+  "screens": [
+    {
+      "name": "Sign In",
+      "title": "Sign in to your Account",
+      "fields": [
+        {"id": "email", "label": "Email", "type": "email", "required": true},
+        {"id": "password", "label": "Password", "type": "password", "required": true},
+        {"id": "rememberMe", "label": "Remember me", "type": "checkbox", "required": false}
+      ],
+      "actions": [
+        {"type": "primary", "id": "login", "label": "Log In"},
+        {"type": "link", "id": "forgotPassword", "label": "Forgot Password ?"},
+        {"type": "link", "id": "signupCta", "label": "Don't have an account? Sign Up"}
+      ],
+      "oauthProviders": ["Google", "Facebook"],
+      "legal": {
+        "signupConsent": "By signing up, you agree to the Terms of Service and Data Processing Agreement"
+      },
+      "statusBarTimeExample": "9:41"
+    },
+    {
+      "name": "Register",
+      "title": "Register",
+      "fields": [
+        {"id": "firstName", "label": "First Name", "type": "text", "required": true},
+        {"id": "lastName", "label": "Last Name", "type": "text", "required": true},
+        {"id": "email", "label": "Email", "type": "email", "required": true},
+        {"id": "birthDate", "label": "Date of Birth", "type": "date", "required": false, "formatExamples": ["DD/MM/YYYY"], "placeholder": "DD/MM/YYYY"},
+        {"id": "phone", "label": "Phone Number (Pakistan)", "type": "tel", "required": false, "formatExamples": ["+92 3XX XXX XXXX", "03XX XXX XXXX"], "placeholder": "03XX XXX XXXX"},
+        {"id": "password", "label": "Set Password", "type": "password", "required": true}
+      ],
+      "actions": [
+        {"type": "primary", "id": "register", "label": "Register"},
+        {"type": "link", "id": "loginCta", "label": "Already have an account? Log In"}
+      ],
+      "statusBarTimeExample": "9:41"
+    }
+  ],
+  "sampleData": {
+    "signIn": {
+      "email": "Loisbecket@gmail.com",
+      "password": "*******",
+      "rememberMe": true,
+      "oauth": ["Google", "Facebook"]
+    },
+    "register": {
+      "firstName": "Lois",
+      "lastName": "Becket",
+      "email": "Loisbecket@gmail.com",
+      "birthDate": "18/03/1998",
+      "phone": "+92 300 123 4567",
+      "password": "*******"
+    }
+  }
+}
+
